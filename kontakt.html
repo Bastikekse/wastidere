@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt - Wastidere</title>
+  <meta name="description" content="Kontakt zu Wastidere mit E-Mail, Telefon, Anschrift und Kontaktformular für Fragen.">
+  <link rel="icon" href="wastidere-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="cookie-banner.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+    <section class="cookie-banner" id="cookie-banner" aria-labelledby="cookie-banner-title" tabindex="-1">
+      <p class="cookie-title" id="cookie-banner-title">Cookies auf dieser Website</p>
+      <p class="cookie-text">Wir setzen notwendige Cookies, damit der Shop funktioniert. Mit deiner Einwilligung setzen wir außerdem Statistik-Cookies (Matomo, selbst gehostet), um die Nutzung der Seite zu verstehen. Marketing- und Drittanbieter-Cookies gibt es nicht. Mehr dazu in der <a href="datenschutz.html#cookies">Datenschutzerklärung</a>.</p>
+      <div class="cookie-actions">
+        <button type="button" class="cookie-button" data-consent="no">Ablehnen</button>
+        <button type="button" class="cookie-button" data-consent="yes">Akzeptieren</button>
+      </div>
+    </section>
+    <div id="cookie-status" class="visually-hidden" role="status" aria-live="polite"></div>
+
+  <header>
+    <!-- Logo verlinkt auf die Startseite; der Alt-Text beschreibt das Linkziel -->
+    <a href="index.html" class="logo-link">
+      <img src="wastidere-logo.svg" alt="Wastidere, zur Startseite" width="61" height="40">
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="index.html">Shop</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+ 
+  <main id="main" class="legal">
+    <h1>Kontakt</h1>
+    <p>Hast du eine Frage zum Wastidere Cutkit, Bestellung oder sonstigem? Schreib uns oder ruf an!</p>
+ 
+    <section aria-labelledby="kontaktdaten">
+      <h2 id="kontaktdaten">Kontaktdaten (fiktiv)</h2>
+      <p>Wastidere GmbH<br>
+        Musterstraße 1<br>
+        1010 Wien, Österreich</p>
+      <p>E-Mail: <a href="mailto:cutkit@wastidere.example">cutkit@wastidere.example</a><br>
+        Telefon: +43 1 0000000</p>
+    </section>
+ 
+    <section aria-labelledby="formular">
+      <h2 id="formular">Kontaktformular</h2>
+      <p>Alle Felder sind Pflichtfelder.</p>
+ 
+      <form id="kontaktformular" class="kontakt-form" novalidate>
+        <input type="hidden" name="csrf" id="csrf-token">
+ 
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required
+                 aria-describedby="name-error"
+                 data-error-missing="Bitte gib deinen Namen ein.">
+          <p class="field-error" id="name-error" hidden></p>
+        </div>
+ 
+        <div class="field">
+          <label for="email">E-Mail-Adresse</label>
+          <input type="email" id="email" name="email" autocomplete="email" required
+                 aria-describedby="email-error"
+                 data-error-missing="Bitte gib deine E-Mail-Adresse ein."
+                 data-error-type="Bitte gib eine gültige E-Mail-Adresse ein, zum Beispiel name@beispiel.at.">
+          <p class="field-error" id="email-error" hidden></p>
+        </div>
+ 
+        <div class="field">
+          <label for="betreff">Betreff</label>
+          <input type="text" id="betreff" name="betreff" required
+                 aria-describedby="betreff-error"
+                 data-error-missing="Bitte gib einen Betreff ein.">
+          <p class="field-error" id="betreff-error" hidden></p>
+        </div>
+ 
+        <div class="field">
+          <label for="nachricht">Nachricht</label>
+          <textarea id="nachricht" name="nachricht" rows="6" required
+                    aria-describedby="nachricht-error"
+                    data-error-missing="Bitte schreib eine Nachricht."></textarea>
+          <p class="field-error" id="nachricht-error" hidden></p>
+        </div>
+ 
+        <p class="form-note">Wir verwenden deine Angaben nur, um deine Anfrage zu beantworten. Für mehr Infos: <a href="datenschutz.html#daten">Datenschutzerklärung</a>.</p>
+ 
+        <button type="submit" class="button">Nachricht senden</button>
+      </form>
+      <div id="form-status" class="form-status" role="status"></div>
+    </section>
+  </main>
+ 
+  <footer>
+    <div class="footer-grid">
+      <nav aria-labelledby="footer-info">
+        <h2 id="footer-info">Informationen</h2>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+          <li><a href="medien-nachweise.html">Medien &amp; Quellen</a></li>
+        </ul>
+      </nav>
+ 
+      <nav aria-labelledby="footer-legal">
+        <h2 id="footer-legal">Rechtliches</h2>
+        <ul>
+          <li><a href="barrierefreiheit.html">Barrierefreiheit</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="lizenz.html">Lizenz</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><button type="button" data-cookie-settings>Cookie-Einstellungen</button></li>
+        </ul>
+      </nav>
+ 
+      <div>
+        <h2>Hinweis</h2>
+        <p>Fiktives Unternehmen, erstellt im Rahmen der Lehrveranstaltung 280.A69 Daten- und Informatikrecht an der TU Wien. Kein reales Angebot!</p>
+        <p class="trademark-note">DaVinci Resolve ist eine Marke von Blackmagic Design. Wastidere steht in keiner Verbindung zu Blackmagic Design.</p>
+      </div>
+    </div>
+ 
+    <p class="footer-bottom">© 2026 Wastidere</p>
+  </footer>
+  <script src="kontakt.js"></script>
+</body>
+</html>

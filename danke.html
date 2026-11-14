@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Danke! - Wastidere</title>
+  <meta name="description" content="Eine Dankes- und Bestätigungsseite des Cutkits.">
+  <link rel="icon" href="wastidere-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="cookie-banner.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+    <section class="cookie-banner" id="cookie-banner" aria-labelledby="cookie-banner-title" tabindex="-1">
+      <p class="cookie-title" id="cookie-banner-title">Cookies auf dieser Website</p>
+      <p class="cookie-text">Wir setzen notwendige Cookies, damit der Shop funktioniert. Mit deiner Einwilligung setzen wir außerdem Statistik-Cookies (Matomo, selbst gehostet), um die Nutzung der Seite zu verstehen. Marketing- und Drittanbieter-Cookies gibt es nicht. Mehr dazu in der <a href="datenschutz.html#cookies">Datenschutzerklärung</a>.</p>
+      <div class="cookie-actions">
+        <button type="button" class="cookie-button" data-consent="no">Ablehnen</button>
+        <button type="button" class="cookie-button" data-consent="yes">Akzeptieren</button>
+      </div>
+    </section>
+    <div id="cookie-status" class="visually-hidden" role="status" aria-live="polite"></div>
+
+  <header>
+    <a href="index.html" class="logo-link">
+      <img src="wastidere-logo.svg" alt="Wastidere, zur Startseite" width="61" height="40">
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="index.html">Shop</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <audio id="welcomeSound"
+       src="freesound_gamestudio-material-buy-success-394517.mp3"
+       preload="auto"></audio>
+
+  <script>
+      const sound = document.getElementById("welcomeSound");
+      sound.volume = 0.6;
+
+      sound.play().catch(() => {
+          document.addEventListener("click", () => {
+              sound.play();
+          }, { once: true });
+      });
+  </script>
+
+  <main id="main" class="danke">
+    <h1>Danke für Ihren Einkauf!</h1>
+    <figure class="danke-bild">
+      <img src="36813942_love_1.jpg" alt="Blaues Herz" width="500">
+      <figcaption>
+        Bild: <a href="https://www.magnific.com/free-vector/vector-heart-love-shape-symbol-template-vector-illustration-hearts-icon_36813942.htm" target="_blank" rel="noopener noreferrer">Image by bunny on Magnific<span class="visually-hidden"> (öffnet in neuem Tab)</span></a>
+      </figcaption>
+    </figure>
+    <p>Dies ist lediglich ein Mock Einkauf zu Testzwecken. Kein echter Einkauf hat stattgefunden und nichts wurde abgebucht.</p>
+    <a class="button" href="index.html">Zurück zur Startseite</a>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <nav aria-labelledby="footer-info">
+        <h2 id="footer-info">Informationen</h2>
+        <ul>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="medien-nachweise.html">Medien & Quellen</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="footer-legal">
+        <h2 id="footer-legal">Rechtliches</h2>
+        <ul>
+          <li><a href="barrierefreiheit.html">Barrierefreiheit</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="lizenz.html">Lizenz</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><button type="button" data-cookie-settings>Cookie-Einstellungen</button></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2>Hinweis</h2>
+        <p>Fiktives Unternehmen, erstellt im Rahmen der Lehrveranstaltung 280.A69 Daten- und Informatikrecht an der TU Wien. Kein reales Angebot!</p>
+        <p class="trademark-note">DaVinci Resolve ist eine Marke von Blackmagic Design. Wastidere steht in keiner Verbindung zu Blackmagic Design.</p>
+      </div>
+    </div>
+
+    <p class="footer-bottom">© 2026 Wastidere</p>
+  </footer>
+</body>
+</html>
